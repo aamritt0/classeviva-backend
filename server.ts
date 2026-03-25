@@ -103,7 +103,7 @@ app.post("/api/classeviva/login", async (req, res) => {
 app.all("/api/classeviva/proxy/:studentId/*", async (req, res) => {
   const { studentId } = req.params;
   const token = req.headers["z-auth-token"];
-  const apiPath = req.params[0]; // The rest of the path after studentId/
+  const apiPath = (req.params as any)[0]; // The rest of the path after studentId/
 
   if (!token) {
     return res.status(401).json({ error: "Missing auth token" });
