@@ -1,0 +1,6 @@
+name = "classeviva-backend"
+main = "src/index.ts"
+compatibility_date = "2024-03-25"
+
+# [vars]
+# FRONTEND_URL = "https://yourfrontend.com"
